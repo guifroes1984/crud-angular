@@ -10,12 +10,12 @@ import { Observable } from 'rxjs';
 })
 export class CursosComponent implements OnInit {
 
-  cursos: Observable<Curso[]>;
+  cursos$: Observable<Curso[]>;
   displayedColumns = ['nome', 'categoria'];
 
   constructor(private cursoService: CursosService) {
 
-    this.cursos = this.cursoService.list();
+    this.cursos$ = this.cursoService.list();
 
   }
 
